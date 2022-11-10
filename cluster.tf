@@ -1,4 +1,4 @@
-/*
+
   resource "oci_containerengine_cluster" "generated_oci_containerengine_cluster" {
 	compartment_id = "${var.compartment_ocid}"
 	endpoint_config {
@@ -6,7 +6,7 @@
 		subnet_id = "${oci_core_subnet.kubernetes_api_endpoint_subnet.id}"
 	}
 	freeform_tags = {
-		"OKEclusterName" = "cluster2"
+		"OKEclusterName" = "demo"
 	}
 	kubernetes_version = "v1.24.1"
 	name = "cluster2"
@@ -72,4 +72,4 @@ resource "oci_containerengine_node_pool" "create_node_pool_details0" {
 		source_type = "IMAGE"
 	}
 }
-*/
+
