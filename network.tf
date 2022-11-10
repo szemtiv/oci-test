@@ -6,7 +6,7 @@ resource "oci_core_virtual_network" "ExampleVCN" {
 }
 
 resource "oci_core_subnet" "ExampleSubnet" {
-  availability_domain = "${var.localAD}"
+  # availability_domain = "${var.localAD}"
   cidr_block = "10.1.20.0/24"
   display_name = "TFExampleSubnet"
   dns_label = "tfexamplesubnet"
