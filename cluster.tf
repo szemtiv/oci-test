@@ -1,6 +1,6 @@
 /*
   resource "oci_containerengine_cluster" "generated_oci_containerengine_cluster" {
-	compartment_id = "ocid1.compartment.oc1..aaaaaaaamd3hih6cimdf45osxhiz3parxgyki4uk4a2ai6kdpczjejrbn3oa"
+	compartment_id = "${var.compartment_ocid}"
 	endpoint_config {
 		is_public_ip_enabled = "true"
 		subnet_id = "${oci_core_subnet.kubernetes_api_endpoint_subnet.id}"
@@ -16,12 +16,12 @@
 		}
 		persistent_volume_config {
 			freeform_tags = {
-				"OKEclusterName" = "cluster2"
+				"OKEclusterName" = "demo"
 			}
 		}
 		service_lb_config {
 			freeform_tags = {
-				"OKEclusterName" = "cluster2"
+				"OKEclusterName" = "demo"
 			}
 		}
 		service_lb_subnet_ids = ["${oci_core_subnet.service_lb_subnet.id}"]
@@ -31,13 +31,13 @@
 
 resource "oci_containerengine_node_pool" "create_node_pool_details0" {
 	cluster_id = "${oci_containerengine_cluster.generated_oci_containerengine_cluster.id}"
-	compartment_id = "ocid1.compartment.oc1..aaaaaaaamd3hih6cimdf45osxhiz3parxgyki4uk4a2ai6kdpczjejrbn3oa"
+	compartment_id = "${var.compartment_ocid}"
 	freeform_tags = {
 		"OKEnodePoolName" = "pool1"
 	}
 	initial_node_labels {
 		key = "name"
-		value = "cluster2"
+		value = "demo"
 	}
 	kubernetes_version = "v1.24.1"
 	name = "pool1"
