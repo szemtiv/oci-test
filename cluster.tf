@@ -26,7 +26,7 @@
 		}
 		service_lb_subnet_ids = ["${oci_core_subnet.service_lb_subnet.id}"]
 	}
-	vcn_id = "${oci_core_vcn.generated_oci_core_vcn.id}"
+	vcn_id = "${oci_core_virtual_network.DemoVCN.id}"
 }
 
 resource "oci_containerengine_node_pool" "create_node_pool_details0" {
