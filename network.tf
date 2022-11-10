@@ -1,5 +1,5 @@
 resource "oci_core_virtual_network" "DemoVCN" {
-  cidr_block = "10.1.0.0/16"
+  cidr_block = "10.0.0.0/16"
   compartment_id = "${var.compartment_ocid}"
   display_name = "DemoVCN"
   dns_label = "demo"
