@@ -9,7 +9,7 @@
 		"OKEclusterName" = "demo"
 	}
 	kubernetes_version = "v1.24.1"
-	name = "cluster2"
+	name = "demo"
 	options {
 		admission_controller_options {
 			is_pod_security_policy_enabled = "false"
