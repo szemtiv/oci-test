@@ -51,9 +51,9 @@ resource "oci_core_default_route_table" "generated_oci_core_default_route_table"
 		description = "traffic to/from internet"
 		destination = "0.0.0.0/0"
 		destination_type = "CIDR_BLOCK"
-		network_entity_id = "${oci_core_internet_gateway.generated_oci_core_internet_gateway.id}"
+		network_entity_id = "${oci_core_internet_gateway.ExampleIG.id}"
 	}
-	manage_default_resource_id = "${oci_core_vcn.generated_oci_core_vcn.default_route_table_id}"
+	manage_default_resource_id = "${oci_core_vcn.DemoVCN.default_route_table_id}"
 }
 
 resource "oci_core_subnet" "service_lb_subnet" {
