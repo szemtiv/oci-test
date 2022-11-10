@@ -63,7 +63,7 @@ resource "oci_core_subnet" "service_lb_subnet" {
 	dns_label = "lbsubbaa9b67e5" # ???
 	prohibit_public_ip_on_vnic = "false"
 	route_table_id = "${oci_core_default_route_table.generated_oci_core_default_route_table.id}"
-	security_list_ids = ["${oci_core_vcn.generated_oci_core_vcn.default_security_list_id}"]
+	security_list_ids = ["${oci_core_virtual_network.generated_oci_core_vcn.default_security_list_id}"]
   vcn_id = "${oci_core_virtual_network.DemoVCN.id}"
 }
 
