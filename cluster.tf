@@ -57,14 +57,14 @@ resource "oci_containerengine_node_pool" "create_node_pool_details0" {
 			availability_domain = "vJOw:EU-FRANKFURT-1-AD-3"
 			subnet_id = "${oci_core_subnet.node_subnet.id}"
 		}
-		size = "3"
+		size = "2"
 	}
 	node_eviction_node_pool_settings {
 		eviction_grace_duration = "PT60M"
 	}
-	node_shape = "VM.Standard.E3.Flex"
+	node_shape = "VM.Standard.A1.Flex"
 	node_shape_config {
-		memory_in_gbs = "16"
+		memory_in_gbs = "8"
 		ocpus = "1"
 	}
 	node_source_details {
