@@ -68,7 +68,7 @@ resource "oci_containerengine_node_pool" "create_node_pool_details0" {
 		ocpus = "1"
 	}
 	node_source_details {
-		image_id = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaaa6bjmlse5m66ynvzdayahqwsn73fug6lh5gjxkcmabivvpzegdpa"
+		image_id = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaaut6utcjrp3sslyfmq4ibto6smaxvdxbftjglomis5mdpijjfjnxa"
 		source_type = "IMAGE"
 	}
 }
